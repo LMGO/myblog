@@ -1,10 +1,9 @@
-@import "../public/variables.scss";
 @import "../public/mixins.scss";
 
 #banner{
-  width: 100%;
+  width: 100vw;
   height: 25vh;
   background-image: url("~@/assets/images/bgimg.jpg");
-  background-size: 100% 100%;
-  background-repeat:no-repeat;
+  background-size: 100vw 100%;
+  // background-repeat:no-repeat;
 }

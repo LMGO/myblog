@@ -1,50 +1,88 @@
-@import "../public/variables.scss";
 @import "../public/mixins.scss";
 
 #navbar {
-  height: 50px;
+  height: 65px;
   background-color: rgba(36, 37, 37, 0.8);
-  @include flex-center(column);
-
+  color: #fff;
+  position: sticky;//粘性定位
+    top: 0;
+  @include flex-center();
+  @media screen and (max-width: 768px){
+    height: 100px;
+    background-color: #fff;
+    color:#000;
+  }
+  @media screen and (max-width: 375px){
+    min-width: 5rem;
+    height: 100px;
+    background-color: #fff;
+    color:#000;
+  }
   .navbar-ul {
-    max-width: 1000px;
+    max-width: 1200px;
     width: 80%;
     height: 100%;
     @include flex-center();
-    
+    @media screen and (max-width: 768px){
+      width: 100%;
+      border-bottom: rgb(180, 178, 178) solid 1px;
+      min-width: 375px;
+    }
 
     .navbar-li {
-      flex: 1;
+      white-space: nowrap;
+      flex: 1 1 0;
       height: 100%;
       list-style: none;
       @include flex-center(column);
-      margin: 0 15px;
-      font-size: 18px;
-      color: #fff;
+      margin: 0 30px;
+      font-size: 25px;
+      @media screen and (max-width: 768px){
+        font-size: 35px;
+      }
+      
     }
 
     li:hover {
-      background-color: #E9F8FF;
       transition: border-radius .5s,background-color .5s;
       cursor: pointer;
-      color: #000;
-      border-radius: 50px 0 50px 0;
+      @media screen and (max-width: 768px){
+        border-radius: 0;
+      }
+      @media screen and (min-width: 769px){
+        background-color: #E9F8FF;
+        color: #000;
+        border-radius: 50px 0 50px 0;
+      }
     }
 
     .h-active {
       color: #000;
       background-color: #E9F8FF;
       border-radius: 50px 0 50px 0;
+      @media screen and (max-width: 768px){
+        border-radius: 0%;
+        background-color: #fff;
+        color:red;
+        border-bottom: red solid 2px;
+        font-weight: bold;
+      }
+      @media screen and (min-width: 768px){
+        background-color: #E9F8FF;
+        color: #000;
+        border-radius: 50px 0 50px 0;
+      }
     }
   }
   .login-register{
-    font-size: 16px;
-    position: absolute;
-    right: 100px;
+    font-size: 20px;
+    margin-left: 150px;
+    // margin-right: 50px;
     color: #fff;
-
+    @include flex-center();
     span{
       cursor: pointer;
+      white-space: nowrap;
     }
   }
 

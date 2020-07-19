@@ -1,9 +1,9 @@
 <template>
-    <div>这是日常点滴</div>
+    <div>心情随笔</div>
 </template>
 <script>
 export default {
-  name: 'lifeShare',
+  name: 'casualTalk',
   data(){
     return{
 

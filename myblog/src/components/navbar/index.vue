@@ -1,15 +1,14 @@
 <template>
   <div id="navbar">
     <ul class="navbar-ul">
-      <li class="navbar-li" :class="{'h-active': isActive === 1}" @click="toIndex">首页</li>
+      <!-- <li v-if="navindex" class="navbar-li" :class="{'h-active': isActive === 1}" @click="toIndex">最新发布</li> -->
       <li class="navbar-li" :class="{'h-active': isActive === 2}" @click="toTechShare">技术分享</li>
-      <li class="navbar-li" :class="{'h-active': isActive === 3}" @click="toMemory">韶华追忆</li>
-      <li class="navbar-li" :class="{'h-active': isActive === 4}" @click="toMoodEssay">心情随笔</li>
-        <!--<li class="navbar-li" :class="{'h-active': isActive === 5}" @click="toTimeAxis">我的时光轴</li>
-      <li class="navbar-li" :class="{'h-active': isActive === 6}" @click="toMessage">留言</li> -->
-      <li class="navbar-li" :class="{'h-active': isActive === 7}" @click="toAboutMe">关于我</li>
+      <li class="navbar-li" :class="{'h-active': isActive === 3}" @click="tolifeShare">日常点滴</li>
+      <li class="navbar-li" :class="{'h-active': isActive === 4}" @click="toCasualTalk">心情随笔</li>
+      <!-- <li class="navbar-li" :class="{'h-active': isActive === 6}" @click="toMessage">留言</li>  -->
+      <!-- <li class="navbar-li" :class="{'h-active': isActive === 7}" @click="toAboutMe">关于我</li> -->
     </ul>
-    <div class="login-register" v-if="!userInfo.username">
+    <div v-if="navindex" class="login-register" v-show="!userInfo.username">
       <span @click="toLogin">登录</span>&nbsp;/
       <span @click="toRegister">注册</span>
     </div>
@@ -42,7 +41,8 @@ export default {
   name: 'navbar',
   data(){
     return {
-      isActive: 1,
+      navindex:true,
+      isActive: 2,//最新发布暂时未实现，技术分享为第一个页面
       isMask: false,
       isLogin: false,
       isRegister: false,
@@ -53,21 +53,28 @@ export default {
     // Login,
     // Register
   },
+  // mounted(){
+  //   let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+  //   if (htmlWidth<=414){
+  //     this.navindex = false
+  //     this.isActive = 2//当前设置技术分享为active
+  //   }
+  // },
   methods: {
     toIndex(){
       this.$router.push({name:'Index'})
       this.isActive = 1
     },
     toTechShare(){
-      this.$router.push({name:'TechShare'})
+      this.$router.push({name:'TechnologyShare'})
       this.isActive = 2
     },
-    toMemory(){
-      this.$router.push({name:'Memory'})
+    tolifeShare(){
+      this.$router.push({name:'LifeShare'})
       this.isActive = 3
     },
-    toMoodEssay(){
-      this.$router.push({name:'MoodEssay'})
+    toCasualTalk(){
+      this.$router.push({name:'CasualTalk'})
       this.isActive = 4
     },
     toTimeAxis(){
