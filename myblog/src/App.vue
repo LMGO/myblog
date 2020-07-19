@@ -65,6 +65,9 @@ export default {
           this.showbottomnav = true;
           this.$router.push({name:'MobileIndex'})
         }else{
+          this.showbanner = true;
+          this.shownavbar = true;
+          this.showbottomnav = false;
           this.$router.push({name:'Index'})
         }
       }
