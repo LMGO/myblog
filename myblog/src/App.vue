@@ -1,10 +1,36 @@
 <template>
   <div id="app">
+    <banner/>
+    <navbar/>
     <router-view/>
   </div>
 </template>
 
+<script>
+import Banner from './components/banner'
+import Navbar from './components/navbar'
+// import GFooter from './components/footer'
+// import Canvas from '@/assets/js/heart.js'
+
+export default {
+  name: 'app',
+  components: {
+    Banner,
+    Navbar,
+    // GFooter
+  }
+};
+</script>
+
 <style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
