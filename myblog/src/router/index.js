@@ -10,17 +10,33 @@ Vue.use(VueRouter)
     name: 'Index',
     component: () => import('@/views/index')
   },
+  {
+    path: '/mobileIndex',
+    name: 'MobileIndex',
+    component: () => import('@/views/mobileIndex')
+  },
   /*技术分享*/
   {
     path: '/technologyShare',
     name: 'TechnologyShare',
-    component: () => import('@/views/technologyShare/technologyShare.vue')
+    component: () => import('@/views/technologyShare')
   },
-  /*日常杂谈*/
+  /*生活点滴*/
   {
     path: '/lifeShare',
     name: 'LifeShare',
-    component: () => import('@/views/lifeShare/lifeShare.vue')
+    component: () => import('@/views/lifeShare')
+  },
+  /*心情随笔*/
+  {
+    path: '/casualTalk',
+    name: 'CasualTalk',
+    component: () => import('@/views/casualTalk')
+  },
+  {
+    path: '/me',
+    name: 'Me',
+    component: () => import('@/views/me')
   },
   {
     path: '*',
@@ -33,5 +49,8 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
-
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 export default router

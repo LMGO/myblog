@@ -1,26 +1,27 @@
 <template>
-  <div id="app">
+ <div id="app">
     <div class="g-main">
-      最新发布
+      <router-view/>
     </div>
+    <bottomnav/>
   </div>
 </template>
 <script>
+import Bottomnav from '../../components/bottomNav'
 export default {
-  name: 'index',
+  name: 'me',
   components: {
+    Bottomnav
   },
     data(){
       return{
-        ispc:false,
+
       }
   },
   mounted(){
-    this.$forceUpdate()
     // let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
     // if (htmlWidth<=414){
-    //   // 根据目前需要，调整显示移动端的首页为技术分享
-    //   this.ispc = true
+    //   // 根据判断设备宽度，调整显示移动端的首页为技术分享
     //   this.$router.push({name:'TechnologyShare'})
     // }
   },  
