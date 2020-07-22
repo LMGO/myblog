@@ -21,11 +21,10 @@
 <script>
 export default {
   name: 'bottomNav',
+  props:["indexactive","meactive"],
+    
   data(){
     return{
-      indexactive:true,
-      meactive:false,
-
     }
   },
   methods:{

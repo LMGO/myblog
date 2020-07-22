@@ -5,26 +5,26 @@
     <div class="g-main">
       <router-view/>
     </div>
-    <bottomnav v-if="showbottomnav"/>
+    <!-- <bottomnav v-if="showbottomnav"/> -->
   </div>
 </template>
 <script>
 import Banner from './components/banner'
 import Navbar from './components/navbar'
-import Bottomnav from './components/bottomNav'
+// import Bottomnav from './components/bottomNav'
 // import Canvas from '@/assets/js/heart.js'
 export default {
   name: 'app',
   components: {
     Banner,
     Navbar,
-    Bottomnav
+    // Bottomnav
   },
   data(){
     return {
       showbanner: true,
       shownavbar:true,
-      showbottomnav:false,//pc端不显示
+      // showbottomnav:false,//pc端不显示
       myProfile: {},
       screenWidth: document.documentElement.clientWidth || document.body.clientWidth
     }
@@ -62,12 +62,12 @@ export default {
           //移动端隐藏banner和nav,显示角底部nav
           this.showbanner = false;
           this.shownavbar = false;
-          this.showbottomnav = true;
+          // this.showbottomnav = true;
           this.$router.push({name:'MobileIndex'})
         }else{
           this.showbanner = true;
           this.shownavbar = true;
-          this.showbottomnav = false;
+          // this.showbottomnav = false;
           this.$router.push({name:'Index'})
         }
       }

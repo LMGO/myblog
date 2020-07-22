@@ -13,7 +13,7 @@
     <div class="g-main">
       {{content}}
     </div>
-    <bottomnav v-if="showbottomNav"/>
+    <bottomnav :indexactive="indexactive" :meactive="meactive" v-if="showbottomNav"/>
   </div>
 </template>
 <script>
@@ -27,6 +27,8 @@ export default {
   },
     data(){
       return{
+        indexactive:true,
+        meactive:false,
         isActive: 2,
         content:"技术分享文章",
         showbottomNav:true,
