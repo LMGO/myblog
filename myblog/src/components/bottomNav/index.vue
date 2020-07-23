@@ -22,20 +22,43 @@
 export default {
   name: 'bottomNav',
   props:["indexactive","meactive"],
+  // {
+  //   indexactive:{
+  //     type:Boolean,
+  //     default:true
+  //   },
+  //   meactive:{
+  //     type:Boolean,
+  //     default:false
+  //   },
+  // },
     
   data(){
     return{
+      // iactive:this.indexactive,
+      // mactive:this.meactive,
     }
+  },
+  computed: {
+      navactive: {
+        get() {
+          return this.indexactive,this.meactive;
+        },
+        set(val1,val2) {
+          //grants_改变由父组件控制
+          this.$emit("change-active", val1,val2);
+        }
+      }
   },
   methods:{
     Toindex(){
-      this.indexactive = true;
-      this.meactive = false;
+      // this.indexactive = true;
+      // this.meactive = false;
       this.$router.push({name:'MobileIndex'})
     },
     Tome(){
-      this.indexactive = false;
-      this.meactive = true;
+      // this.indexactive = false;
+      // this.meactive = true;
       this.$router.push({name:'Me'})
     }
   }
