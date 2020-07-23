@@ -3,7 +3,7 @@
     <div class="g-main">
       <router-view/>
     </div>
-    <bottomnav/>
+    <bottomnav :meactive="meactive" :indexactive="indexactive" />
   </div>
 </template>
 <script>
@@ -13,9 +13,13 @@ export default {
   components: {
     Bottomnav
   },
+  props:{
+    
+  },
     data(){
       return{
-
+        meactive:true,
+        indexactive:false,
       }
   },
   mounted(){
