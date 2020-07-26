@@ -34,8 +34,8 @@
 </template>
 
 <script>
-// import Login from '@/components/login'
-// import Register from '@/components/register'
+import Login from '@/components/login'
+import Register from '@/components/register'
 
 export default {
   name: 'navbar',
@@ -50,8 +50,8 @@ export default {
     }
   },
   components: {
-    // Login,
-    // Register
+    Login,
+    Register
   },
   // mounted(){
   //   let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;

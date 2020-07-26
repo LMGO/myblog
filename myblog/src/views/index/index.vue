@@ -17,12 +17,8 @@ export default {
   },
   mounted(){
     this.$forceUpdate()
-    // let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
-    // if (htmlWidth<=414){
-    //   // 根据目前需要，调整显示移动端的首页为技术分享
-    //   this.ispc = true
-    //   this.$router.push({name:'TechnologyShare'})
-    // }
+    //暂无首页
+    this.$router.push({name:'TechnologyShare'})
   },  
 }
 </script>

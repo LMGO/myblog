@@ -36,7 +36,7 @@ export default {
       self.screenWidth = Width
     })
     let htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
-    if(htmlWidth<768){
+    if(htmlWidth<1024){
           //移动端隐藏banner和nav,显示角底部nav
           self.showbanner = false;
           self.shownavbar = false;
@@ -58,7 +58,7 @@ export default {
             that.timer = false
           },500)
         }
-        if(this.screenWidth<768){
+        if(this.screenWidth<1024){
           //移动端隐藏banner和nav,显示角底部nav
           this.showbanner = false;
           this.shownavbar = false;

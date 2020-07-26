@@ -1,0 +1,5 @@
+const serverUrl = ''
+
+export {
+  serverUrl
+}
