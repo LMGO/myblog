@@ -2,7 +2,7 @@
  <div >
     <div class="main">
       <div class="headimg">
-          <div class="head"><img src="http://img.qqzhi.com/uploads/2018-12-02/052721779.jpg" alt=""></div>
+          <div class="head"><img src="../../assets/images/head.jpg" alt=""></div>
           <div class="user_name">沐雙惜</div>
           <div class="sign" v-if="true" @click="toLogin">登录 / 注册</div>
           <div class="welcome" v-else>您好，欢迎您！</div>
@@ -54,10 +54,13 @@ export default {
         indexactive:false,
         mylist:[{
           icon:require('../../assets/icons/likes.png'),
-          title:'我的点赞',
+          title:'点赞',
         },{
           icon:require('../../assets/icons/mycollections.png'),
-          title:'我的收藏',
+          title:'收藏',
+        },{
+          icon:require('../../assets/icons/about_me.png'),
+          title:'关于',
         },{
           icon:require('../../assets/icons/set.png'),
           title:'设置',
