@@ -5,25 +5,20 @@
   background-color: rgba(36, 37, 37, 0.8);
   color: #fff;
   position: sticky;//粘性定位
-    top: 0;
+  top: 0;
   @include flex-center();
-  @media screen and (max-width: 768px){
-    height: 100px;
-    background-color: #fff;
-    color:#000;
-  }
-  @media screen and (max-width: 375px){
-    min-width: 5rem;
+  @media screen and (max-width: 767px){
     height: 100px;
     background-color: #fff;
     color:#000;
   }
   .navbar-ul {
+    flex: 1;
     max-width: 1200px;
     width: 80%;
     height: 100%;
     @include flex-center();
-    @media screen and (max-width: 768px){
+    @media screen and (max-width: 767px){
       width: 100%;
       border-bottom: rgb(180, 178, 178) solid 1px;
       min-width: 375px;
@@ -39,7 +34,7 @@
       @include flex-center(column);
       margin: 0 30px;
       font-size: 25px;
-      @media screen and (max-width: 768px){
+      @media screen and (max-width: 767px){
         font-size: 35px;
       }
       
@@ -48,10 +43,10 @@
     li:hover {
       transition: border-radius .5s,background-color .5s;
       cursor: pointer;
-      @media screen and (max-width: 768px){
+      @media screen and (max-width: 767px){
         border-radius: 0;
       }
-      @media screen and (min-width: 769px){
+      @media screen and (min-width: 768px){
         background-color: #E9F8FF;
         color: #000;
         border-radius: 50px 0 50px 0;
@@ -78,7 +73,8 @@
   }
   .login-register{
     font-size: 20px;
-    margin-left: 150px;
+    margin: 0 100px 0 auto;
+
     // margin-right: 50px;
     color: #fff;
     @include flex-center();

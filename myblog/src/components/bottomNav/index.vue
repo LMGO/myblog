@@ -40,15 +40,15 @@ export default {
     }
   },
   computed: {
-      navactive: {
-        get() {
-          return this.indexactive,this.meactive;
-        },
-        set(val1,val2) {
-          //grants_改变由父组件控制
-          this.$emit("change-active", val1,val2);
-        }
-      }
+      // navactive: {
+      //   get() {
+      //     return this.indexactive,this.meactive;
+      //   },
+      //   set(val1,val2) {
+      //     //改变由父组件控制
+      //     this.$emit("change-active", val1,val2);
+      //   }
+      // }
   },
   methods:{
     Toindex(){
