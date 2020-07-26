@@ -14,7 +14,7 @@
   }
   .navbar-ul {
     flex: 1;
-    max-width: 1200px;
+    max-width: 1000px;
     width: 80%;
     height: 100%;
     @include flex-center();
@@ -26,7 +26,7 @@
 
     .navbar-li {
       white-space: nowrap;
-      flex: 1 1 0;
+      flex: 1;
       min-width: 50px;
       max-width: 200px;
       height: 100%;
@@ -57,7 +57,7 @@
       color: #000;
       background-color: #E9F8FF;
       border-radius: 50px 0 50px 0;
-      @media screen and (max-width: 768px){
+      @media screen and (max-width: 767px){
         border-radius: 0%;
         background-color: #fff;
         color:red;
@@ -72,10 +72,9 @@
     }
   }
   .login-register{
+    position: absolute;
     font-size: 20px;
-    margin: 0 100px 0 auto;
-
-    // margin-right: 50px;
+    right: 150px ;
     color: #fff;
     @include flex-center();
     span{
